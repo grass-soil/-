@@ -56,26 +56,17 @@ $$
 
 **证明 $A \subseteq B$：**
 
-设 $f$ 是 $a, b$ 的一个公约数，则：
-$$
-f \mid a, \quad f \mid b
-$$
+设 $f$ 是 $a, b$ 的一个公约数，则 $f \mid a$ 且 $f \mid b$。
 
-又因为：
-$$
-d = a - c \cdot b
-$$
+又因为 $d = a - c \cdot b$，且 $f \mid a$、$f \mid b$，
 
-由于 $f \mid a$ 且 $f \mid b$，所以 $f \mid (a - c \cdot b)$，即 $f \mid d$。
+所以 $f \mid (a - c \cdot b)$，即 $f \mid d$。
 
 因此，$f$ 也是 $b, d$ 的公约数，所以 $A \subseteq B$。
 
 **证明 $B \subseteq A$：**
 
-设 $g$ 是 $b, d$ 的一个公约数，则：
-$$
-g \mid b, \quad g \mid d
-$$
+设 $g$ 是 $b, d$ 的一个公约数，则 $g \mid b$ 且 $g \mid d$。
 
 由 $a = d + c \cdot b$，可得 $g \mid a$。
 
@@ -88,4 +79,4 @@ $$
 
 **迭代终止性：**
 
-由于每次迭代中，新的除数等于上一次的余数 $d$，且 $0 \le d < b$，所以 $b$ 的值严格递减（非负整数序列），最终必然到达 $d = 0$，此时上一次的除数即为最大公约数。
+因为每次迭代后的新除数等于上一次的余数 $d$，且 $0 \le d < b$，所以 $b$ 的值会严格递减（非负整数序列），最终必然到达 $d = 0$，此时即可求出最大公约数。
