@@ -68,3 +68,15 @@ double power(double base,int pow)
 
 其实递归就是一个大问题化小的过程，其思路与数学归纳法相似。
 递归更多是自顶向下的，而迭代是自下向顶
+
+### Master公式
+利用这个公式可以确定递归的时间复杂度 <br>
+T(n) = a * T(n / b) + O(n^c) <br>
+其中b代表调用函数划分给被调函数的大小，a代表调用次数，c代表调用函数除去调用之外的复杂度 <br>
+1. logb(a) < c 则复杂度O(n^c)
+2. logb(a) > c O(n^logb(a))
+3. logb(a) = c O(n^c * log(n))
+
+### 特例
+T(n) = a * T(n / b) + O(n * log(n))
+那么 O(n * logn * logn)
